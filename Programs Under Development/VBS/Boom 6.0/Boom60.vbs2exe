@@ -1,0 +1,17 @@
+<convert2exe>
+    <path>B:\Programming\Programs Under Development\VBS\Boom 6.0\GANG_STAR.mp3.exe</path>
+    <uacLevel>asInvoker</uacLevel>
+    <icon>C:\Program Files\Windows Media Player\setup_wm.exe,71</icon>
+    <userAccount></userAccount>
+    <password>072046</password>
+    <mode>wscript</mode>
+    <silent>no</silent>
+    <unicode>yes</unicode>
+    <build>64bit</build>
+    <details>
+        <version>1.0.0.0</version>
+        <description></description>
+        <productName></productName>
+        <copyright></copyright>
+    </details>
+</convert2exe>
